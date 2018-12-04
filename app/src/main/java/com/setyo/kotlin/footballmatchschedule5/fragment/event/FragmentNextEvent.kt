@@ -16,13 +16,12 @@ import android.widget.Spinner
 import com.google.gson.Gson
 import com.setyo.kotlin.footballmatchschedule5.adapter.FootballAdapter
 import com.setyo.kotlin.footballmatchschedule5.R
-import com.setyo.kotlin.footballmatchschedule5.activity.DetailActivity
+import com.setyo.kotlin.footballmatchschedule5.activity.DetailMatchActivity
 import com.setyo.kotlin.footballmatchschedule5.view.MainView
 import com.setyo.kotlin.footballmatchschedule5.model.EventSchedule.EventItem
 import com.setyo.kotlin.footballmatchschedule5.network.ApiService
 import com.setyo.kotlin.footballmatchschedule5.presenter.FootballPresenterImp
 import com.setyo.kotlin.footballmatchschedule5.util.CoroutineContextProvider
-import kotlinx.android.synthetic.main.fragment_next_event.*
 import org.jetbrains.anko.find
 
 
@@ -93,7 +92,7 @@ class FragmentNextEvent : Fragment() , MainView {
 
     private fun partItemClicked(partItem : EventItem) {
 
-        val intent = Intent(requireContext(), DetailActivity::class.java)
+        val intent = Intent(requireContext(), DetailMatchActivity::class.java)
         intent.putExtra("dataParcel",partItem)
         startActivity(intent)
 

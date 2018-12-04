@@ -13,10 +13,8 @@ class MyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             0 -> {
                 FragmentLastEvent.newInstance()
             }
-            1 -> FragmentNextEvent.newInstance()
-
             else -> {
-                return FragmentLastEvent.newInstance()
+                return FragmentNextEvent.newInstance()
             }
         }
 
@@ -30,9 +28,8 @@ class MyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getPageTitle(position: Int): CharSequence {
         return when (position) {
             0 -> "Last Event"
-            1 -> "Next Event"
             else -> {
-                return "Search"
+                return "Next Event"
             }
         }
     }

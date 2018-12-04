@@ -37,9 +37,7 @@ object Network {
         fun getPlayerList(player: String?): String{
                 return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/lookup_all_players.php?id=" + player
         }
-        fun getPlayerDetail(player: String?): String{
-                return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/lookupplayer.php?id=" + player
-        }
+
 
 
 

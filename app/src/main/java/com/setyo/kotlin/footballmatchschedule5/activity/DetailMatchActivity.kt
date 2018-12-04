@@ -28,7 +28,7 @@ import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.select
 
 
-class DetailActivity : AppCompatActivity() , DetailView {
+class DetailMatchActivity : AppCompatActivity() , DetailView {
 
     lateinit var presenter : DetailPresenterImp
     val api = ApiService()

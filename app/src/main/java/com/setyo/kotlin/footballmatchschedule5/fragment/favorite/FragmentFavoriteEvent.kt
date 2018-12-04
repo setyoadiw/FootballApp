@@ -13,7 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.setyo.kotlin.footballmatchschedule5.R
-import com.setyo.kotlin.footballmatchschedule5.activity.DetailActivity
+import com.setyo.kotlin.footballmatchschedule5.activity.DetailMatchActivity
 import com.setyo.kotlin.footballmatchschedule5.adapter.FavoriteEventAdapter
 import com.setyo.kotlin.footballmatchschedule5.database.Favorite
 import com.setyo.kotlin.footballmatchschedule5.database.database
@@ -40,7 +40,7 @@ class FragmentFavoriteEvent : Fragment()  {
 
         adapter = FavoriteEventAdapter(favorites,requireContext()){
 
-            val intent = Intent(requireContext(), DetailActivity::class.java)
+            val intent = Intent(requireContext(), DetailMatchActivity::class.java)
             intent.putExtra("dataParcelFav",it)
             startActivity(intent)
         }

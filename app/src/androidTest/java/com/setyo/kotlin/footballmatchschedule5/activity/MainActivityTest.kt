@@ -24,6 +24,29 @@ class MainActivityTest{
     fun testAppBehaviour(){
         //Aplikasi terbuka dan menampilkan beberapa view
         Thread.sleep(3000)
+
+        //memeriksa viewpager tampil
+        Espresso.onView(ViewMatchers.withId(viewpager_main)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Thread.sleep(2000)
+        //melakukan swipe ke kiri
+        Espresso.onView(ViewMatchers.withId(viewpager_main)).perform(ViewActions.swipeLeft())
+        Thread.sleep(2000)
+
+        //melakukan swipe ke kanan
+        Espresso.onView(ViewMatchers.withId(viewpager_main)).perform(ViewActions.swipeRight())
+        Thread.sleep(2000)
+
+        //memeriksa spinner tampil
+        Espresso.onView(ViewMatchers.withId(spinnerlast))
+                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Thread.sleep(2000)
+        //melakukan klik pada spinner
+        Espresso.onView(ViewMatchers.withId(spinnerlast)).perform(ViewActions.click())
+        Thread.sleep(2000)
+        //melakukan klik pada item French Ligue 1
+        Espresso.onView(ViewMatchers.withText("German Bundesliga")).perform(ViewActions.click())
+        Thread.sleep(2000)
+
         //memastikan recyclerview last event tampil
         Espresso.onView(ViewMatchers.withId(recyclerview))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))

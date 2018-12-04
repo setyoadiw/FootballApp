@@ -9,6 +9,7 @@ import com.setyo.kotlin.footballmatchschedule5.fragment.event.FragmentNextEvent
 import com.setyo.kotlin.footballmatchschedule5.R
 import com.setyo.kotlin.footballmatchschedule5.fragment.favorite.FragmentFavoriteEvent
 import com.setyo.kotlin.footballmatchschedule5.fragment.event.TabEventFragment
+import com.setyo.kotlin.footballmatchschedule5.fragment.favorite.TabFavoriteFragment
 import com.setyo.kotlin.footballmatchschedule5.fragment.team.FragmentTeam
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity(){
                 return@OnNavigationItemSelectedListener true
             }
             R.id.fav -> {
-                val fragment = FragmentFavoriteEvent.newInstance()
+                val fragment = TabFavoriteFragment.newInstance()
                 addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
