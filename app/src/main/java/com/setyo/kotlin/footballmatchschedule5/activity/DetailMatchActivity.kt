@@ -35,7 +35,6 @@ class DetailMatchActivity : AppCompatActivity() , DetailView {
     val gson = Gson()
     var context: CoroutineContextProvider? = CoroutineContextProvider()
 
-//    lateinit var dataTeamDetail : java.util.ArrayList<TeamsItem>
     private var isFavorite: Boolean = false
     lateinit var idHome : String
     lateinit var idAway : String

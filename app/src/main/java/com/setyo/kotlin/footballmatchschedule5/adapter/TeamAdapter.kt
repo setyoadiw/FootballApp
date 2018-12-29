@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import com.setyo.kotlin.footballmatchschedule5.R
 import com.setyo.kotlin.footballmatchschedule5.model.TeamDetail.TeamsItem
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.content_detail.*
 import kotlinx.android.synthetic.main.recycler_team_item.view.*
-import org.jetbrains.anko.ctx
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 class TeamAdapter(private val context: Context,

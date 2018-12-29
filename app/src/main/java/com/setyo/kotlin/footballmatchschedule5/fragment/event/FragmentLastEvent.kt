@@ -44,7 +44,6 @@ class FragmentLastEvent : Fragment() , MainView {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
 
         val fragmentView : View = inflater.inflate(R.layout.fragment_last_event, container, false)
         setHasOptionsMenu(true)
@@ -147,7 +146,6 @@ class FragmentLastEvent : Fragment() , MainView {
                     presenter.getDataLastEvents(leagueId[currentPos])
                 }else{
                     presenter.getEventSearch(newText?.replace(" ", "_"))
-//                    presenter.getEventSearch("arsenal")
 
                 }
                 return true

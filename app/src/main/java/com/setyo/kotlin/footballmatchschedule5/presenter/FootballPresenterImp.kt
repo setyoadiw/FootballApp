@@ -64,7 +64,7 @@ class FootballPresenterImp(val MainView: MainView,
 
     fun getEventSearch(event: String?) {
 
-        MainView.showLoading()
+
 
         GlobalScope.launch(Dispatchers.Main){
 
@@ -74,10 +74,12 @@ class FootballPresenterImp(val MainView: MainView,
                         .doRequest(Network.getScheduleBySearch(event)).await(),
                         ResponseSearch::class.java)
 
-                MainView.berhasil(data3.event as List<EventItem>)
-                MainView.berhasilNextEvent(data3.event)
+                if(data3 != null){
+                    MainView.berhasil(data3.event as List<EventItem>)
+                    MainView.berhasilNextEvent(data3.event)
+                }
 
-                MainView.hideLoading()
+                Log.d("mengecekdatasearchevent",data3.toString())
 
             }catch (e: TypeCastException){
                 e.printStackTrace()

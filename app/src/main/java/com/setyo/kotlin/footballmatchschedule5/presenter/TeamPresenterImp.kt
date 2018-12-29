@@ -28,8 +28,6 @@ class TeamPresenterImp(val teamView: TeamView,
                     .doRequest(Network.getTeamList(team)).await(),
                     ResponseTeamDetail::class.java
             )
-            Log.d("cekdatateamfromspinner",team.toString())
-            Log.d("cekdatateam",data.teams.toString())
 
             teamView.berhasil(data.teams as List<TeamsItem>)
             teamView.hideLoading()

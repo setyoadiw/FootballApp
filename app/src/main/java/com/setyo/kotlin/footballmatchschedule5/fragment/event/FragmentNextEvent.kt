@@ -142,7 +142,6 @@ class FragmentNextEvent : Fragment() , MainView {
                 }else{
 
                     presenter.getEventSearch(newText?.replace(" ", "_"))
-//                    presenter.getEventSearch("arsenal")
 
                 }
                 return true

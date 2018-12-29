@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity(){
     private fun addFragment(fragment: Fragment) {
         supportFragmentManager
                 .beginTransaction()
-//                .setCustomAnimations(R.anim.design_bottom_sheet_slide_in, R.anim.design_bottom_sheet_slide_out)
                 .replace(R.id.content, fragment, fragment.javaClass.getSimpleName())
                 .commit()
     }
@@ -68,15 +67,4 @@ class MainActivity : AppCompatActivity(){
 
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        menuInflater.inflate(R.menu.menu_main, menu)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.action_settings -> true
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
 }
